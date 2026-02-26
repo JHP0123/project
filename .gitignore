@@ -1,0 +1,15 @@
+# build
+*.o
+*.out
+*.exe
+*.a
+
+
+# core dump
+core
+
+# vscode
+.vscode/
+
+# temp
+*.swp
