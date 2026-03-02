@@ -16,6 +16,22 @@ void jhpsh_loop(void)
         if (strcmp(buffer, "-\n") == 0) // "-\n"를 입력하면 loop 탈출
             break;
         tokenzie_command(buffer, cmd);
+
+        if (strcmp((*cmd).argv[0], "cd") == 0)
+        {
+            /* handle cd command */
+            cd_command((*cmd).argv[1]);
+            continue;
+        }
+        else if (strcmp((*cmd).argv[0], "exit") == 0)
+        {
+            /* handle exit command */
+        }
+        else if (strcmp((*cmd).argv[0], "echo") == 0)
+        {
+            /* handle echo command */
+        }
+
         for(int i = 0; i <= (*cmd).argc; i++)
             printf("argv[%d] = %s\n", i, (*cmd).argv[i]);
         // argv[argc]에는 \0 (NULL)이 있어야 한다.  

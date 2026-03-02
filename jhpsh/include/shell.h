@@ -39,4 +39,7 @@ void m_dealloc(char *buffer, char **argv, Command *cmd); // memory.c
 // Loop jhpsh
 void jhpsh_loop(void);  // jhpsh_loop.c
 
+//Built-ins command (cd, exit, echo)
+void cd_command(char *dir);   // built-ins.c
+
 #endif
