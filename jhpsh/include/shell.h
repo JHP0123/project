@@ -34,6 +34,9 @@ Command *tokenzie_command(char *buffer, Command *cmd); // parser.c
 void init_command_process(Command *cmd); // execute.c
 
 // Deallocation routine
-void terminate(void); // memory.c
+void m_dealloc(char *buffer, char **argv, Command *cmd); // memory.c
+
+// Loop jhpsh
+void jhpsh_loop(void);  // jhpsh_loop.c
 
 #endif

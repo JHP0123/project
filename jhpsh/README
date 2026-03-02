@@ -34,4 +34,4 @@ jhpsh/
         execute.c       : Process create/execute/wait (init_command_process())              unistd.h, stdlib.h, wait.h
         builtins.c      : Inner shell commands (cd, exit, pwd) transactions 
         memory.c        : Deallocation routine (terminate())                                stdlib.c
-        jhpsh_loop.c    : prompt.c + parser.c + execute + builtins.c + memory.c
+        jhpsh_loop.c    : prompt.c + parser.c + execute + builtins.c (+ memory.c)
