@@ -3,11 +3,8 @@
 
 int main()
 {
-    char ch[] = "i like pizza\n";
-    char space[] = " ";
-    char *ptr = NULL;
+    char ch[] = "cdd";
+    char ch1[] = "cd";
 
-    ptr = strstr(ch, space);
-    printf("%p\n", ch);
-    printf("%p\n", ptr);
+    printf("%d", strcmp(ch, ch1));
 }

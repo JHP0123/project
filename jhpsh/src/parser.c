@@ -5,7 +5,6 @@
 Command *tokenzie_command(char *buffer, Command *cmd)
 {
     char *token;
-    (*cmd).argv = (char **)malloc(sizeof(char *) * 50uL); // argv에 메모리 동적 할당 필요
 
     token = strtok(buffer, " \n");
     // "ls -ll"를 사용자가 입력하면 buffer = "ls -ll\n\0"을 받게 된다. 
