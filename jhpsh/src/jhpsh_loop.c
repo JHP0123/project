@@ -16,6 +16,13 @@ void jhpsh_loop(void)
         get_command_line(); 
         if ((strcmp(buffer, "-\n") == 0) || (strcmp(buffer, "exit\n") == 0)) // "-\n"를 입력하면 loop 탈출
             break;
+
+        if (strncmp(buffer, "echo", 4) == 0)
+        {
+            echo_command(buffer, " \n", cmd);
+            continue;
+        }
+
         tokenzie_command(buffer, cmd);
 
         if (strcmp((*cmd).argv[0], "cd") == 0)
@@ -24,15 +31,10 @@ void jhpsh_loop(void)
             cd_command((*cmd).argv[1]);
             continue;
         }
-        // else if (strcmp((*cmd).argv[0], "exit") == 0)
+        // else if (strcmp((*cmd).argv[0], "echo") == 0)
         // {
-        //     break;
-        //     /* handle exit command */
+                /* handle echo command */
         // }
-        else if (strcmp((*cmd).argv[0], "echo") == 0)
-        {
-            /* handle echo command */
-        }
 
         for(int i = 0; i <= (*cmd).argc; i++)
             printf("argv[%d] = %s\n", i, (*cmd).argv[i]);

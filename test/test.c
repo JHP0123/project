@@ -3,8 +3,7 @@
 
 int main()
 {
-    char ch[] = "cdd";
-    char ch1[] = "cd";
+    char ch[] = "acd ef\n";
 
-    printf("%d", strcmp(ch, ch1));
+    printf("%s", ch);
 }

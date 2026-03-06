@@ -41,5 +41,6 @@ void jhpsh_loop(void);  // jhpsh_loop.c
 
 //Built-ins command (cd, exit, echo)
 void cd_command(char *dir);   // built-ins.c
+void echo_command(char *buffer, const char *delim_str_type, Command *cmd);
 
 #endif
