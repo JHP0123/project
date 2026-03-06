@@ -39,3 +39,15 @@ jhpsh/
             after child process terminates even though the user commanded "cd". ***
         memory.c        : Deallocation routine (terminate())                                stdlib.c
         jhpsh_loop.c    : prompt.c + parser.c + execute + builtins.c (+ memory.c)
+
+
+
+*** Should modify parser without using strtok().
+    1. All spaces should be ignored
+    2. String ("...") should be 1 token
+    3. argv[argc] = NULL
+    4. Example: [      echo      -e      "i like\npizza"] should be rightfully tokenized
+                argv[0] -> echo\0
+                argv[1] -> -e\0
+                argv[2] -> "i like\npizza"
+                argv[3] -> NULL

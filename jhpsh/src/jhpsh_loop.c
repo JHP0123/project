@@ -13,7 +13,11 @@ void jhpsh_loop(void)
     while (1)
     {
         (*cmd).argc = 0;
-        get_command_line(); 
+        get_command_line();
+        
+        if (strcmp(buffer, "\n") == 0)
+            continue;
+
         if ((strcmp(buffer, "-\n") == 0) || (strcmp(buffer, "exit\n") == 0)) // "-\n"를 입력하면 loop 탈출
             break;
 
@@ -23,7 +27,8 @@ void jhpsh_loop(void)
             continue;
         }
 
-        tokenzie_command(buffer, cmd);
+        tokenzie_command(buffer, cmd);      // should make my own parser...
+                                            // strtok() 
 
         if (strcmp((*cmd).argv[0], "cd") == 0)
         {

@@ -14,8 +14,6 @@ char *get_command_line(void)
     fflush(stdout);
 
     read = getline(&buffer, &size, stdin);
-    printf("%s", buffer);
-    fflush(stdout);
 
     return buffer;
 }

@@ -22,6 +22,8 @@ void cd_command(char *dir)
 
 void echo_command(char *buffer, const char *delim_str_type, Command *cmd)
 {
+    // echo-usage parser...
+    
     char *sStr = buffer;
     char *string = NULL;
     int set_string_lock = 0;
@@ -81,7 +83,8 @@ void echo_command(char *buffer, const char *delim_str_type, Command *cmd)
         {
             printf("%s ", (*cmd).argv[cnt]);
         }
+        printf("\n");
     }
-    printf("\n");
+
     fflush(stdout);
 }
