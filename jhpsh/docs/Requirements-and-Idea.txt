@@ -1,0 +1,11 @@
+요구사항
+    - 개인 shell을 만들어서 여러 system call을 사용해보고, shell의 주요 기능들을 분석하면서 실제로 OS에서 어떤 방식으로 작동하는지를 이해하기 위함
+    - jhpsh shell을 만드는 중에 system programming을 공부하면서 shell을 직접 구현해보는 것이 도움이 많이 된다는 것을 느낌
+    - 기존 jhpsh shell은 ls, cd, echo를 간단하게 구현함. 
+    - 하지만 다른 명령어나 기능을 추가하다보면, 기존 shell 코드를 대량 수정해야 되는 단점이 있음.
+    - 물론 system call 중 fork, execve, wait 등에 대해서 알게 되었고, IO의 흐름을 대략적으로 이해하는 계기가 됨. 
+    - bash와 같은 실제 shell처럼 구현하기 위해서는 기존 jhpsh shell의 틀에서 나와 shell의 general parser를 구현하고, built-ins기능과 아닌 기능을 구분하여 일관된 과정을
+      거치는 shell을 만드는 것이 목표.
+
+shell의 기능
+    - 

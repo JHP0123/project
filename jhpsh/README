@@ -1,3 +1,5 @@
+**** jhpsh project ended... working on 'shell' project in 'shell' repository ****
+
 Flow of how shell works using POSIX funcions
 
 1. Prompt the user using getcwd() and getline()
